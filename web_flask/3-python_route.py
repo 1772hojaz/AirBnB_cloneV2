@@ -18,10 +18,10 @@ def c_textx(text):
     return 'C {}'.format(text.replace('_', ' '))
 
 
-@app.route('/python/(<text>)', strict_slashes=False)
+@app.route('/python/<text>', strict_slashes=False)
 def python_text(text):
     """Displays 'Python' followed byb the value of the text variable"""
-    return 'Python {}'.format(text.replace('_',' '))
+    return 'Python {}'.format(text.replace('_', ' '))
 
 if __name__=='__main__':
     app.run(host='0.0.0.0', port=5000)
