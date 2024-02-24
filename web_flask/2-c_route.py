@@ -1,8 +1,6 @@
 #!/usr/bin/python3
 """Starts a Flask web application"""
 from flask import Flask
-
-
 app=Flask(__name__)
 
 
@@ -19,7 +17,7 @@ def hbnb():
 
 
 @app.route('/c/<text>', strict_slashes=False)
-def c_textx():
+def c_text(text):
     """Display 'C' followed by the value of the text variable"""
      return "C {}".format(text.replace('_', ' '))
 
