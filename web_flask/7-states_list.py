@@ -1,4 +1,4 @@
-
+#!/usr/bin/python3
 """Starts Flask application"""
 
 from models import storage
