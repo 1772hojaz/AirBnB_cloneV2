@@ -18,9 +18,16 @@ def c_textx(text):
     return 'C {}'.format(text.replace('_', ' '))
 
 
-@app.route('/python/<text>', strict_slashes=False)
-def python_text(text):
+@app.route('/python/', strict_slashes=False)
+def python_text():
     """Displays 'Python' followed byb the value of the text variable"""
+    text = 'is cool'
+    return 'Python {}'.format(text)
+
+
+@app.route('/python/<text>', strict_slashes=False)
+def python_textx(text):
+    """Displays 'Python' followed by the value of the text variable"""
     return 'Python {}'.format(text.replace('_', ' '))
 
 if __name__=='__main__':
