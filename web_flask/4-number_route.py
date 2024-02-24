@@ -37,10 +37,12 @@ def python_textx(text):
 
 
 @app.route('/number/<n>', strict_slashes=False)
-def number_n(n):
+def number(n):
     """Displays 'n is a number' only if n is an integer"""
-    if isinstance(n, int):
+    if isinstance(int(n), int):
         return '{} is a number'.format(n)
+    else:
+        pass
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
